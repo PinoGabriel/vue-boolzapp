@@ -116,3 +116,16 @@ body {
     overflow-y: auto;
     box-sizing: border-box;
 }
+
+.lastMessage {
+    color: #CCD4D1;
+    font-size: 0.7rem;
+}
+
+.bg-color-white {
+    background-color: white;
+}
+
+.selected {
+    background-color: #E9EBEB;
+}
