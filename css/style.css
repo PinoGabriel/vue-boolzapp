@@ -42,7 +42,6 @@ body {
 .userChatContainer {
     width: calc(100% - 385px);
     height: 850px;
-    border: 1px solid green;
 }
 
 .row {
@@ -81,6 +80,7 @@ body {
 
 .bg-cian {
     background-color: #8EDAFC;
+    height: 70px;
 }
 
 .bg-cian .fa-solid {
@@ -97,6 +97,7 @@ body {
 
 .bg-white {
     background-color: white;
+    height: 50px;
 }
 
 .bg-white span {
@@ -112,7 +113,7 @@ body {
 }
 
 .containerContacts {
-    height: calc(100% - 204px); /* Altezza rimanente meno l'altezza di userContainer */
+    height: calc(100% - 70px - 60px - 50px); /* Altezza rimanente meno l'altezza di userContainer */
     background-color: white;
     overflow-y: auto;
     box-sizing: border-box;
@@ -139,4 +140,36 @@ body {
 .lowContainer {
     height: calc(100% - 720px - 60px);
     background-color: #F3EEEA;
+}
+
+.bgGreenChat {
+    background-color: #D5F9BA;
+    border-radius: 6px;
+}
+
+.bgWhiteChat {
+    background-color: white;
+    border-radius: 6px;
+}
+
+.timePaddings {
+    padding: 0 2px 4px 16px;
+}
+
+.rowChat {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.lowContainer .fa-regular, 
+.lowContainer .fa-solid {
+    color: #6B7376;
+    font-size: 24px;
+}
+
+.lowContainer input {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
 }
