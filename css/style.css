@@ -37,7 +37,6 @@ body {
 .userNameContainer {
     width: 385px;
     height: 850px;
-    border: 1px solid red;
 }
 
 .userChatContainer {
@@ -108,11 +107,13 @@ body {
 
 .bg-white input {
     width: 100%;
+    border: 1px solid #CCD4D1;
+    border-radius: 5px;
 }
 
 .containerContacts {
     height: calc(100% - 204px); /* Altezza rimanente meno l'altezza di userContainer */
-    border: 1px solid pink;
+    background-color: white;
     overflow-y: auto;
     box-sizing: border-box;
 }
@@ -128,4 +129,14 @@ body {
 
 .selected {
     background-color: #E9EBEB;
+}
+
+.chatContainerBg {
+    height: 720px;
+    background-image: url(../img/mine.jpg);
+}
+
+.lowContainer {
+    height: calc(100% - 720px - 60px);
+    background-color: #F3EEEA;
 }

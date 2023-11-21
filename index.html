@@ -57,7 +57,7 @@
                     <div class="containerContacts">
                         <div v-for="(element, i) in contacts" class="row p-16 bg-color-white flex-justify-between">
                             <div class="d-flex">
-                                <img class="myImg" :src="element.avatar" alt="element.name">
+                                <img class="myImg" :src="element.avatar" :alt="element.name">
                                 <div class="px-8">
                                     <div>{{element.name}}</div>
                                     <div class="lastMessage">Ultimo messaggio inviato</div>
@@ -71,6 +71,9 @@
                 </section>
     
     
+
+
+
                 <!-- CONTENITORE DI DESTRA -->
                 <section class="userChatContainer">
                     <div class="userContainer">
@@ -88,6 +91,14 @@
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="chatContainerBg">
+
+                    </div>
+
+                    <div class="lowContainer">
+
                     </div>
                 </section>
     
