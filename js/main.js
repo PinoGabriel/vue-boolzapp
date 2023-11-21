@@ -7,20 +7,20 @@
             {
                 name: 'Michele',
                 avatar: './img/avatar_1.jpg',
-                visible: true,
+                visible: false,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: '15:30',
                         message: 'Hai portato a spasso il cane?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: '15:50',
                         message: 'Ricordati di stendere i panni',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 16:15:22',
+                        date: '16:15',
                         message: 'Tutto fatto!',
                         status: 'received'
                     }
@@ -29,7 +29,7 @@
             {
                 name: 'Fabio',
                 avatar: './img/avatar_2.jpg',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -51,7 +51,7 @@
             {
                 name: 'Samuele',
                 avatar: './img/avatar_3.jpg',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -73,7 +73,7 @@
             {
                 name: 'Alessandro B.',
                 avatar: './img/avatar_4.jpg',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -90,7 +90,7 @@
             {
                 name: 'Alessandro L.',
                 avatar: './img/avatar_5.jpg',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -107,7 +107,7 @@
             {
                 name: 'Claudia',
                 avatar: './img/avatar_6.jpg',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -129,7 +129,7 @@
             {
                 name: 'Federico',
                 avatar: './img/avatar_7.jpg',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -146,7 +146,7 @@
             {
                 name: 'Davide',
                 avatar: './img/avatar_8.jpg',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -164,31 +164,22 @@
                         status: 'received'
                     }
                 ],
+                
             }
-        ]
+        ],
+        selected: 0,
         
       }
+      
+    },
+    methods: {
+        checkClick(i) {
+            this.selected = i
+        },
     }
   }).mount('#app')
                
 
 
 
-
-
-
-
-
-/* <div class="row p-16 bg-color-white selected flex-justify-between">
-                        <div class="d-flex">
-                            <img class="myImg" src="./img/avatar_io.jpg" alt="mioAvatar">
-                            <div class="px-8">
-                                <div>Gabriel</div>
-                                <div class="lastMessage">Ultimo messaggio inviato</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="lastMessage">12:00</div>
-                        </div>
-                    </div> */
 

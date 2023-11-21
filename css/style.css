@@ -115,7 +115,7 @@ body {
 .containerContacts {
     height: calc(100% - 70px - 60px - 50px); /* Altezza rimanente meno l'altezza di userContainer */
     background-color: white;
-    overflow-y: auto;
+    overflow-y: scroll;
     box-sizing: border-box;
 }
 
@@ -135,6 +135,7 @@ body {
 .chatContainerBg {
     height: 720px;
     background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
 }
 
 .lowContainer {
@@ -172,4 +173,14 @@ body {
     padding: 12px;
     border: none;
     border-radius: 6px;
+}
+
+.colore {
+    background-color: #E9EBEB;
+}
+
+.dNone {display: none;}
+
+.dFlex {
+    display: flex;
 }
