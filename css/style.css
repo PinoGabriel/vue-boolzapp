@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+.topGreen {
+    background-color: #009688;
+    height: 15vh;
+    width: 100%;
+}
+
+.backGrey {
+    background-color: #DCDBD2;
+    height: 85vh;
+    width: 100%;
+}
+
+.bigContainer {
+    height: 90vh;
+    margin: auto;
+    width: 1100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.userNameContainer {
+    width: 385px;
+    height: 850px;
+    border: 1px solid red;
+}
+
+.userChatContainer {
+    width: calc(100% - 385px);
+    height: 850px;
+    border: 1px solid green;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.userContainer {
+    height: 60px;
+    padding: 10px;
+    background-color: #EAEAEA;
+}
+
+.border-right {
+    border-right: 0.5px solid #B1B1B1;
+}
+
+.myImg {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.px-8 {
+    padding: 0 8px;
+}
+
+.userContainer .fa-solid {
+    color: #B1B1B1;
+    font-size: 18px;
+}
+
+.uDates {
+    font-size: 0.7rem;
+    color: #B1B1B1;
+}
+
+.bg-cian {
+    background-color: #8EDAFC;
+}
+
+.bg-cian .fa-solid {
+    color: #8EDAFC;
+    font-size: 1.2rem;
+    background-color: white;
+    border-radius: 50%;
+    padding: 12px;
+}
+
+.bg-cian a {
+    color: #B1B1B1;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-white span {
+    width: 15%;
+    text-align: center;
+    color: #B1B1B1
+}
+
+.bg-white input {
+    width: 100%;
+}
+
+.containerContacts {
+    height: calc(100% - 204px); /* Altezza rimanente meno l'altezza di userContainer */
+    border: 1px solid pink;
+    overflow-y: auto;
+    box-sizing: border-box;
+}

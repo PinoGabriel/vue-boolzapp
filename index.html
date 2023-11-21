@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueWhatsApp</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="topGreen"></section>
+        <section class="backGrey"></section>
+
+        <!-- CONTENITORE GENERALE -->
+        <section class="bigContainer">
+
+            <!-- CONTENITORE DI SINISTRA -->
+            <section class="userNameContainer">
+
+                <div class="row flex-justify-between userContainer border-right flex-align-center">
+                    <div class="d-flex flex-align-center">
+                        <img class="myImg" src="./img/avatar_io.jpg" alt="mioAvatar">
+                        <div class="px-8">Gabriel</div>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message px-16"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="row bg-cian p-16">
+                    <div class="d-flex flex-align-center">
+                        <i class="fa-solid fa-bell-slash"></i>
+                        <div class="px-8">
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+                            <div><a href="#">Attiva notifiche desktop</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row bg-white p-16 flex-align-center">
+                    <span><i class="fa-solid fa-magnifying-glass p-8"></i></span>
+                    <input type="text" class="p-8" placeholder="Cerca o inizia una nuova chat">
+                </div>
+
+                <div class="containerContacts">
+                    <div class="row">
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- CONTENITORE DI DESTRA -->
+            <section class="userChatContainer">
+                <div class="userContainer">
+                    <div class="row flex-justify-between flex-align-center">
+                        <div class="d-flex flex-align-center">
+                            <img class="myImg" src="./img/avatar_io.jpg" alt="mioAvatar">
+                            <div class="px-8">
+                                <div>Gabriel</div>
+                                <div class="uDates">Ultimo accesso oggi alle 12:00</div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip px-16"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </section>
+
+
+
+
+
+
+    </main>
+
+
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

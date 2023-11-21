@@ -1,0 +1,103 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+/*** FLEX ***/
+.d-flex {	display: flex;	}
+.flex-row {	flex-direction: row; }
+.flex-column { flex-direction: column; }
+.flex-justify-between { justify-content: space-between; }
+.flex-justify-around { justify-content: space-around; }
+.flex-justify-center { justify-content: center; }
+.flex-justify-end { justify-content: flex-end; }
+.flex-align-start { align-items: flex-start; }
+.flex-align-center { align-items: center; }
+
+
+/*** LARGHEZZE ***/
+.w-20 { width: 20%; } /* 1/5 */
+.w-25 { width: 25%; } /* 1/4 */
+.w-30 { width: 30%; } /* 1/3 */
+.w-33 { width: 33%; } /* 1/3 */
+.w-40 { width: 40%; } /* 2/5 */
+.w-50 { width: 50%; } /* 1/2 */
+.w-60 { width: 60%; } /* 3/5 */
+.w-66 { width: 66%; } /* 2/3 */
+.w-70 { width: 70%; } /* 3/4 */
+.w-75 { width: 75%; } /* 3/4 */
+.w-80 { width: 80%; } /* 4/5 */
+.w-100 { width: 100%; }
+
+/*** PADDINGS ***/
+.p-16 { padding: 16px; }
+.pt-16 { padding-top: 16px; }
+.pr-16 { padding-right: 16px; }
+.pb-16 { padding-bottom: 16px; }
+.pl-16 { padding-left: 16px; }
+.py-16 { padding: 16px 0; }
+.px-16 { padding: 0 16px; }
+
+.p-8 { padding: 8px; }
+.pt-8 { padding-top: 8px; }
+.pr-8 { padding-right: 8px; }
+.pb-8 { padding-bottom: 8px; }
+.pl-8 { padding-left: 8px; }
+.py-8 { padding: 8px 0; }
+.px-8 { padding: 0 8px; }
+
+.p-64 { padding: 64px; }
+.pt-64 { padding-top: 64px; }
+.pr-64 { padding-right: 64px; }
+.pb-64 { padding-bottom: 64px; }
+.pl-64 { padding-left: 64px; }
+.py-64 { padding: 64px 0; }
+.px-64 { padding: 0 64px; }
+
+.p-300 { padding: 300px; }
+.pt-300 { padding-top: 300px; }
+.pr-300 { padding-right: 6300x; }
+.pb-300 { padding-bottom: 300px; }
+.pl-300 { padding-left: 300px; }
+.py-300 { padding: 300px 0; }
+.px-300 { padding: 0 300px; }
+
+/*** BACKGROUND COLORS ***/
+.bg-lightblue { background-color: lightblue; }
+.bg-goldenrod { background-color: goldenrod; }
+.bg-darkblue { background-color: darkblue; }
+.bg-dodgerblue { background-color: dodgerblue; }
+.bg-pink { background-color: pink; }
+.bg-violet { background-color: violet; }
+.bg-lightseagreen { background-color: lightseagreen; }
+.bg-lightcoral { background-color: lightcoral; }
+.bg-forestgreen { background-color: forestgreen; }
+.bg-aquamarine { background-color: aquamarine; }
+.bg-darkslategray { background-color: darkslategray; }
+.bg-lightgray { background-color: lightgray; }
+.bg-black { background-color: black; }
+
+
+/*** Decorazioni ***/
+.decoration-no {
+    text-decoration: none;
+}
+
+/*** TEXT COLORS ***/
+.c-white {
+    color: white;
+}
+.c-black {
+    color: black;
+}
+
+/*** TEXT ALLINEATO ***/
+.t-align-center {
+    text-align: center;
+}
