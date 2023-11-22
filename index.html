@@ -18,8 +18,7 @@
 
     <div id="app">
         <main>
-            <section class="topGreen"></section>
-            <section class="backGrey"></section>
+            
     
             <!-- CONTENITORE GENERALE -->
             <section class="bigContainer">
@@ -51,11 +50,11 @@
     
                     <div class="row bg-white p-16 flex-align-center">
                         <span><i class="fa-solid fa-magnifying-glass p-8"></i></span>
-                        <input type="text" class="p-8" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" v-model="search" class="p-8" placeholder="Cerca o inizia una nuova chat">
                     </div>
     
                     <div class="containerContacts">
-                        <div v-for="(element, i) in contacts" :class="{ colore: (i == selected) }" class="row p-16 bg-color-white flex-justify-between" @click="checkClick(i)">
+                        <div v-for="(element, i) in filteredUser()" :class="{ colore: (i == selected) }" class="row p-16 bg-color-white flex-justify-between" @click="checkClick(i)">
                             <div class="d-flex">
                                 <img class="myImg" :src="element.avatar" :alt="element.name">
                                 <div class="px-8">
@@ -99,7 +98,11 @@
                             <div class="w-60" :class="[element.status === 'received' ? 'dNone' : '']"></div>
                             <div class="w-40 d-flex flex-justify-between" :class="[element.status === 'sent' ? 'bgGreenChat' : 'bgWhiteChat']"> 
                                 <div class="p-16">{{element.message}}</div>
-                                <div class="d-flex flex-align-end flex-justify-end lastMessage timePaddings">{{element.date}}</div>
+                                <div class="d-flex flex-column flex-justify-between">
+                                    <i class="d-flex flex-justify-end lastMessage timePaddings fa-solid fa-angle-down"></i>
+                                    <div class="d-flex flex-justify-end lastMessage timePaddings">{{element.date}}</div>
+                                </div>
+                                
                             </div>   
                         </div>
                     </div>
@@ -121,7 +124,8 @@
     
     
     
-    
+            <section class="topGreen"></section>
+            <section class="backGrey"></section>
         </main>
 
     </div>

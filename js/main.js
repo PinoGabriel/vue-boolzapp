@@ -169,7 +169,8 @@
             }
         ],
         selected: 0,
-        nuovoValore: ""
+        nuovoValore: "",
+        search: ""
         
       }
       
@@ -189,8 +190,14 @@
                 setTimeout(() => {
                     this.contacts[this.selected].messages.push({date: (hour + ":" + minutes), message: "OK", status: 'received'})
                 }, 1000);
+        },
+        filteredUser() {
+            let search = this.search.toLowerCase()
+            return this.contacts.filter((contact) => {
+                let contactLowerCase = contact.name.toLowerCase()
+                return contactLowerCase.match(search);
+            })
         }
     }
   }).mount('#app')
-
  

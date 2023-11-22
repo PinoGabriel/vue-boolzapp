@@ -21,6 +21,7 @@
 .flex-align-start { align-items: flex-start; }
 .flex-align-center { align-items: center; }
 .flex-align-end { align-items: flex-end; }
+.flex-column {flex-direction: column;}
 
 
 /*** LARGHEZZE ***/
