@@ -181,15 +181,14 @@
         addToChat(){
             const d = new Date()
             let hour = d.getHours()
-            let minutes = d.getMinutes()
+            let minutes = d.getMinutes().toString().padStart(2, `0`)
 
 
-            if (this.contacts[this.selected].messages.push({date: (hour + ":" + minutes), message: this.nuovoValore, status: 'sent'})) {
+            this.contacts[this.selected].messages.push({date: (hour + ":" + minutes), message: this.nuovoValore, status: 'sent'})
                 this.nuovoValore = ""
                 setTimeout(() => {
-                    this.contacts[this.selected].messages.push({date: '${hour}:${minutes}', message: "OK", status: 'received'})
+                    this.contacts[this.selected].messages.push({date: (hour + ":" + minutes), message: "OK", status: 'received'})
                 }, 1000);
-            }
         }
     }
   }).mount('#app')
