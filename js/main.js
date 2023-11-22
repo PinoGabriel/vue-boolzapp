@@ -1,4 +1,5 @@
-  const { createApp } = Vue
+ 
+ const { createApp } = Vue
 
   createApp({
     data() {
@@ -7,7 +8,7 @@
             {
                 name: 'Michele',
                 avatar: './img/avatar_1.jpg',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '15:30',
@@ -29,7 +30,7 @@
             {
                 name: 'Fabio',
                 avatar: './img/avatar_2.jpg',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -51,7 +52,7 @@
             {
                 name: 'Samuele',
                 avatar: './img/avatar_3.jpg',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -73,7 +74,7 @@
             {
                 name: 'Alessandro B.',
                 avatar: './img/avatar_4.jpg',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -90,7 +91,7 @@
             {
                 name: 'Alessandro L.',
                 avatar: './img/avatar_5.jpg',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -107,7 +108,7 @@
             {
                 name: 'Claudia',
                 avatar: './img/avatar_6.jpg',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -129,7 +130,7 @@
             {
                 name: 'Federico',
                 avatar: './img/avatar_7.jpg',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -146,7 +147,7 @@
             {
                 name: 'Davide',
                 avatar: './img/avatar_8.jpg',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -178,17 +179,19 @@
             this.selected = i
         },
         addToChat(){
-            if (this.contacts[this.selected].messages.push({date: '20/03/2020 16:35:00', message: this.nuovoValore, status: 'sent'})) {
+            const d = new Date()
+            let hour = d.getHours()
+            let minutes = d.getMinutes()
+
+
+            if (this.contacts[this.selected].messages.push({date: (hour + ":" + minutes), message: this.nuovoValore, status: 'sent'})) {
                 this.nuovoValore = ""
                 setTimeout(() => {
-                    this.contacts[this.selected].messages.push({date: '20/03/2020 16:35:00', message: "OK", status: 'received'})
+                    this.contacts[this.selected].messages.push({date: '${hour}:${minutes}', message: "OK", status: 'received'})
                 }, 1000);
             }
         }
     }
   }).mount('#app')
-               
 
-
-
-
+ 
