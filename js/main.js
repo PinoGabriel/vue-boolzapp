@@ -168,6 +168,7 @@
             }
         ],
         selected: 0,
+        nuovoValore: ""
         
       }
       
@@ -176,6 +177,14 @@
         checkClick(i) {
             this.selected = i
         },
+        addToChat(){
+            if (this.contacts[this.selected].messages.push({date: '20/03/2020 16:35:00', message: this.nuovoValore, status: 'sent'})) {
+                this.nuovoValore = ""
+                setTimeout(() => {
+                    this.contacts[this.selected].messages.push({date: '20/03/2020 16:35:00', message: "OK", status: 'received'})
+                }, 1000);
+            }
+        }
     }
   }).mount('#app')
                

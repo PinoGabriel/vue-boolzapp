@@ -17,6 +17,7 @@
 .flex-justify-around { justify-content: space-around; }
 .flex-justify-center { justify-content: center; }
 .flex-justify-end { justify-content: flex-end; }
+.flex-justify-start { justify-content: flex-start; }
 .flex-align-start { align-items: flex-start; }
 .flex-align-center { align-items: center; }
 .flex-align-end { align-items: flex-end; }
