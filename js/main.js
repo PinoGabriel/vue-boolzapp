@@ -171,7 +171,8 @@
         ],
         selected: 0,
         nuovoValore: "",
-        search: ""
+        search: "",
+        toggleDropdown: false
         
       }
       
@@ -198,6 +199,10 @@
                 let contactLowerCase = contact.name.toLowerCase()
                 return contactLowerCase.match(search);
             })
+        },
+        openDropdown(i) {
+            this.toggleDropdown[i] = !this.toggleDropdown[i]
+            console.log(this.toggleDropdown[i]);
         }
     }
   }).mount('#app')

@@ -147,11 +147,7 @@ body {
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
 }
-
-.fa-angle-down {
-    padding: 5px;
-    font-size: 14px;
-}
+  
 
 .lowContainer {
     height: calc(100% - 720px - 60px);
