@@ -208,6 +208,10 @@
                 contact.visible = false;
               }
             });
+          },
+        
+          removeMessage(i) {
+            this.contacts[this.selected].messages.splice(i, 1)
           }
     }
   }).mount('#app')

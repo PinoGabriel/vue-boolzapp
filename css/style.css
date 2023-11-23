@@ -137,6 +137,10 @@ body {
     box-sizing: border-box;
 }
 
+.containerContacts .row {
+    cursor: pointer;
+}
+
 .lastMessage {
     color: #CCD4D1;
     font-size: 0.7rem;
@@ -160,6 +164,11 @@ body {
     height: 720px;
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
+}
+
+.remove {
+    color: red;
+    cursor: pointer;
 }
   
 
