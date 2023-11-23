@@ -20,13 +20,13 @@
         <main>
             
     
-            <!-- CONTENITORE GENERALE -->
+            <!-- MAIN CONTAINER -->
             <section class="bigContainer">
     
-                <!-- CONTENITORE DI SINISTRA -->
-                <section class="userNameContainer">
+                <!-- LEFT CONTAINER -->
+                <section id="leftSide" class="userNameContainer">
     
-                    <div class="row flex-justify-between userContainer border-right flex-align-center">
+                    <div class="row flex-justify-between userContainer borderRight flex-align-center">
                         <div class="d-flex flex-align-center">
                             <img class="myImg" src="./img/avatar_io.jpg" alt="mioAvatar">
                             <div class="px-8">Gabriel</div>
@@ -38,7 +38,7 @@
                         </div>
                     </div>
     
-                    <div class="row bg-cian p-16">
+                    <div class="row bgCian p-16">
                         <div class="d-flex flex-align-center">
                             <i class="fa-solid fa-bell-slash"></i>
                             <div class="px-8">
@@ -48,13 +48,14 @@
                         </div>
                     </div>
     
-                    <div class="row bg-white p-16 flex-align-center">
+                    <div class="row bgWhite p-16 flex-align-center">
                         <span><i class="fa-solid fa-magnifying-glass p-8"></i></span>
                         <input type="text" v-model="search" class="p-8" placeholder="Cerca o inizia una nuova chat" @keyup="searchContacts()">
                     </div>
-    
+                    
+                    <!-- CONTACTS CONTAINER -->
                     <div class="containerContacts">
-                        <div v-for="(element, i) in contacts" v-show="element.visible" :class="{ colore: (i == selected) }" class="row p-16 bg-color-white flex-justify-between" @click="checkClick(i)">
+                        <div v-for="(element, i) in contacts" v-show="element.visible" :class="{ colorToClick: (i == selected) }" class="row p-16 bg-color-white flex-justify-between" @click="checkClick(i)">
                             <div class="d-flex">
                                 <img class="myImg" :src="element.avatar" :alt="element.name">
                                 <div class="px-8">
@@ -73,8 +74,8 @@
 
 
 
-                <!-- CONTENITORE DI DESTRA -->
-                <section class="userChatContainer">
+                <!-- RIGHT CONTAINER -->
+                <section id="rightSide" class="userChatContainer">
                     <div class="userContainer">
                         <div v-for="(element, i) in contacts" :class="{ dFlex: (i == selected) }" class="row flex-justify-between flex-align-center dNone">
                             <div class="d-flex flex-align-center">
@@ -91,7 +92,8 @@
                             </div>
                         </div>
                     </div>
-
+                    
+                    <!-- CHAT CONTAINER -->
                     <div class="chatContainerBg">
                         <div class="pt-64"></div>
                         <div v-for="(element, i) in contacts[selected].messages" :class="{ dFlex: (i == selected)}" class="rowChat pt-8">
@@ -103,6 +105,7 @@
                         </div>
                     </div>
 
+                    <!-- INPUT TO CHAT CONTAINER -->
                     <div class="lowContainer">
                         <div class="row h-100 flex-justify-between flex-align-center">
                             <i class="fa-regular fa-face-smile pl-32"></i>
