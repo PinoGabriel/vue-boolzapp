@@ -50,11 +50,11 @@
     
                     <div class="row bg-white p-16 flex-align-center">
                         <span><i class="fa-solid fa-magnifying-glass p-8"></i></span>
-                        <input type="text" v-model="search" class="p-8" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" v-model="search" class="p-8" placeholder="Cerca o inizia una nuova chat" @keyup="searchContacts()">
                     </div>
     
                     <div class="containerContacts">
-                        <div v-for="(element, i) in filteredUser()" :class="{ colore: (i == selected) }" class="row p-16 bg-color-white flex-justify-between" @click="checkClick(i)">
+                        <div v-for="(element, i) in contacts" v-show="element.visible" :class="{ colore: (i == selected) }" class="row p-16 bg-color-white flex-justify-between" @click="checkClick(i)">
                             <div class="d-flex">
                                 <img class="myImg" :src="element.avatar" :alt="element.name">
                                 <div class="px-8">

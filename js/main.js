@@ -193,17 +193,37 @@
                     this.contacts[this.selected].messages.push({date: (hour + ":" + minutes), message: "OK", status: 'received'})
                 }, 1000);
         },
-        filteredUser() {
+        openDropdown(i) {
+            this.toggleDropdown[i] = !this.toggleDropdown[i]
+            console.log(this.toggleDropdown[i]);
+        },
+        searchContacts() {
+            const search = this.search.toLowerCase();
+          
+            this.contacts.forEach((contact) => {
+              const contactLowerCase = contact.name.toLowerCase();
+              if (contactLowerCase.includes(search)) {
+                contact.visible = true;
+              } else {
+                contact.visible = false;
+              }
+            });
+          }
+    }
+  }).mount('#app')
+ 
+
+
+/* SOLUZIONE BARRA DI RICERCA TROVATA SU YOUTUBE */
+
+  /* filteredUser() {
             let search = this.search.toLowerCase()
             return this.contacts.filter((contact) => {
                 let contactLowerCase = contact.name.toLowerCase()
                 return contactLowerCase.match(search);
             })
-        },
-        openDropdown(i) {
-            this.toggleDropdown[i] = !this.toggleDropdown[i]
-            console.log(this.toggleDropdown[i]);
-        }
-    }
-  }).mount('#app')
- 
+        }, 
+    */
+
+/* LA FUNZIONE filteredUser() bisognava metterla all'interno del v-for
+   es. v-for="(element, i) in filteredUser()" */
